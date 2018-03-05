@@ -37,6 +37,24 @@ class VirtualContentUpdater: NSObject, ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
         guard let faceAnchor = anchor as? ARFaceAnchor else {return}
         virtualFaceNode?.update(with: faceAnchor)
-        print(faceAnchor.blendShapes[ARFaceAnchor.BlendShapeLocation.noseSneerLeft])
+        if let leftEmitter = virtualFaceNode?.childNode(withName: "emitter1", recursively: true)?.particleSystems?.first,
+            let rightEmitter = virtualFaceNode?.childNode(withName: "emitter2", recursively: true)?.particleSystems?.first,
+            let brow = faceAnchor.blendShapes[ARFaceAnchor.BlendShapeLocation.browDownLeft]?.doubleValue
+
+        {
+            
+            var browAmount = (CGFloat(brow) - 0.75) / 12.0
+            if(browAmount < 0.001) {
+                browAmount = 0.001
+            }
+            leftEmitter.particleLifeSpan = 1.0 + browAmount * 10.0
+            rightEmitter.particleLifeSpan = 1.0 + browAmount * 10.0
+           // print(browAmount)
+            leftEmitter.particleSize = browAmount
+            rightEmitter.particleSize = browAmount
+  
+            
+        }
+        
     }
 }

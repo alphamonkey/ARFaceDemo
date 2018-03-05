@@ -25,7 +25,7 @@ class ViewController: UIViewController {
         sceneView.delegate = contentUpdater
         session.delegate = self
         sceneView.automaticallyUpdatesLighting = true
-        //createBackgroundPlane()
+        createBackgroundPlane()
         createFaceGeometry()
         restartExperience()
         
@@ -57,8 +57,25 @@ class ViewController: UIViewController {
         node.position.z = 0.06
         node.renderingOrder = -1
         
+        let emitterNode1 = SCNNode(geometry: nil)
+        let emitterNode2 = SCNNode(geometry: nil)
+        emitterNode1.name = "emitter1"
+        emitterNode2.name = "emitter2"
+        
+        let emitter1 = SCNParticleSystem(named: "RedEye.scnp", inDirectory: nil)
+        let emitter2 = SCNParticleSystem(named: "RedEye.scnp", inDirectory: nil)
+        
+        emitterNode1.position = SCNVector3(-0.032, 0.0275, 0.03)
+        emitterNode2.position = SCNVector3(0.032, 0.0275, 0.03)
+        
+        emitterNode1.addParticleSystem(emitter1!)
+        emitterNode2.addParticleSystem(emitter2!)
+        
+        
         contentUpdater.virtualFaceNode = Mask(geometry: maskGeometry)
         contentUpdater.virtualFaceNode?.addChildNode(node)
+        contentUpdater.virtualFaceNode?.addChildNode(emitterNode1)
+        contentUpdater.virtualFaceNode?.addChildNode(emitterNode2)
     }
 
 

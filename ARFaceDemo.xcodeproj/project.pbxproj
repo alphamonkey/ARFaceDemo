@@ -16,6 +16,8 @@
 		BC5352342044AC48005E8A9A /* VirtualFaceContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5352332044AC48005E8A9A /* VirtualFaceContent.swift */; };
 		BC5352362044AC76005E8A9A /* Mask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC5352352044AC76005E8A9A /* Mask.swift */; };
 		BC5352382044B8D2005E8A9A /* halfred.png in Resources */ = {isa = PBXBuildFile; fileRef = BC5352372044B8D2005E8A9A /* halfred.png */; };
+		BC92ABF8204738350037CBB5 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = BC92ABF6204738350037CBB5 /* spark.png */; };
+		BC92ABF9204738350037CBB5 /* RedEye.scnp in Resources */ = {isa = PBXBuildFile; fileRef = BC92ABF7204738350037CBB5 /* RedEye.scnp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +32,8 @@
 		BC5352332044AC48005E8A9A /* VirtualFaceContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualFaceContent.swift; sourceTree = "<group>"; };
 		BC5352352044AC76005E8A9A /* Mask.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mask.swift; sourceTree = "<group>"; };
 		BC5352372044B8D2005E8A9A /* halfred.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = halfred.png; sourceTree = "<group>"; };
+		BC92ABF6204738350037CBB5 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		BC92ABF7204738350037CBB5 /* RedEye.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = RedEye.scnp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +68,8 @@
 			children = (
 				BC53521F2044A9F8005E8A9A /* AppDelegate.swift */,
 				BC5352212044A9F8005E8A9A /* ViewController.swift */,
+				BC92ABF6204738350037CBB5 /* spark.png */,
+				BC92ABF7204738350037CBB5 /* RedEye.scnp */,
 				BC5352332044AC48005E8A9A /* VirtualFaceContent.swift */,
 				BC5352372044B8D2005E8A9A /* halfred.png */,
 				BC5352352044AC76005E8A9A /* Mask.swift */,
@@ -135,10 +141,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BC92ABF8204738350037CBB5 /* spark.png in Resources */,
 				BC5352382044B8D2005E8A9A /* halfred.png in Resources */,
 				BC53522A2044A9F8005E8A9A /* LaunchScreen.storyboard in Resources */,
 				BC5352272044A9F8005E8A9A /* Assets.xcassets in Resources */,
 				BC5352252044A9F8005E8A9A /* Main.storyboard in Resources */,
+				BC92ABF9204738350037CBB5 /* RedEye.scnp in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
