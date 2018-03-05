@@ -47,6 +47,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BC21284D204DC18D00CA9D93 /* Art */ = {
+			isa = PBXGroup;
+			children = (
+				BC92ABF7204738350037CBB5 /* RedEye.scnp */,
+				BC92ABF6204738350037CBB5 /* spark.png */,
+				BC5352372044B8D2005E8A9A /* halfred.png */,
+			);
+			path = Art;
+			sourceTree = "<group>";
+		};
 		BC5352132044A9F8005E8A9A = {
 			isa = PBXGroup;
 			children = (
@@ -66,12 +76,10 @@
 		BC53521E2044A9F8005E8A9A /* ARFaceDemo */ = {
 			isa = PBXGroup;
 			children = (
+				BC21284D204DC18D00CA9D93 /* Art */,
 				BC53521F2044A9F8005E8A9A /* AppDelegate.swift */,
 				BC5352212044A9F8005E8A9A /* ViewController.swift */,
-				BC92ABF6204738350037CBB5 /* spark.png */,
-				BC92ABF7204738350037CBB5 /* RedEye.scnp */,
 				BC5352332044AC48005E8A9A /* VirtualFaceContent.swift */,
-				BC5352372044B8D2005E8A9A /* halfred.png */,
 				BC5352352044AC76005E8A9A /* Mask.swift */,
 				BC5352312044AACA005E8A9A /* VirtualContentUpdater.swift */,
 				BC5352232044A9F8005E8A9A /* Main.storyboard */,

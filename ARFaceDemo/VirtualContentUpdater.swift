@@ -49,7 +49,7 @@ class VirtualContentUpdater: NSObject, ARSCNViewDelegate {
             }
             leftEmitter.particleLifeSpan = 1.0 + browAmount * 10.0
             rightEmitter.particleLifeSpan = 1.0 + browAmount * 10.0
-           // print(browAmount)
+
             leftEmitter.particleSize = browAmount
             rightEmitter.particleSize = browAmount
   
