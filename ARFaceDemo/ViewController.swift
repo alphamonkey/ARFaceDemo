@@ -46,7 +46,6 @@ class ViewController: UIViewController {
         }
         let mask = Mask(device: device)
         contentUpdater.virtualFaceNode = mask
-        
 
     }
 
@@ -55,4 +54,17 @@ class ViewController: UIViewController {
 
 extension ViewController:ARSessionDelegate {
     
+    func sessionInterruptionEnded(_ session: ARSession) {
+        DispatchQueue.main.async {
+            self.restartExperience()
+        }
+    }
+    
+    func session(_ session: ARSession, didFailWithError error: Error) {
+        guard error is ARError else { return }
+        let error = error as NSError
+        let messages = [error.localizedDescription, error.localizedFailureReason, error.localizedRecoverySuggestion].flatMap { ($0) }
+        let errorString = messages.joined(separator: "\n")
+        print(errorString)
+    }
 }
